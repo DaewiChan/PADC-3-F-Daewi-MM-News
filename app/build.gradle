@@ -3,8 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.padcmyanmar.padc_3_f_mm_news"
-        minSdkVersion 21
+        applicationId "com.padcmyanmar.news"
+        minSdkVersion 18
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
