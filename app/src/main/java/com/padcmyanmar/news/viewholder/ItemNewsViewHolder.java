@@ -1,5 +1,6 @@
 package com.padcmyanmar.news.viewholder;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -36,6 +37,8 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.iv_news)
     ImageView ivNews;
 
+    private NewsVO mNews;
+
 
     private NewsActionDelegate mNewsActionDelegate;
     public ItemNewsViewHolder(View itemView, NewsActionDelegate newsActionDelegate) {
@@ -49,10 +52,12 @@ public class ItemNewsViewHolder extends RecyclerView.ViewHolder {
     @OnClick(R.id.cv_news_item_root)
     public void onNewsItemTap(View view) {
         //Toast.makeText(view.getContext(),"News Item Clicked",Toast.LENGTH_LONG).show();
-        mNewsActionDelegate.onTapNewsItem();
+        mNewsActionDelegate.onTapNewsItem(mNews);
 
     }
     public void setNews(NewsVO news) {
+        mNews=news;
+
         tvPublicationTitle.setText(news.getPublication().getTitle());
         tvPostedDate.setText(news.getPostedDate());
         tvNewsBrief.setText(news.getBrief());

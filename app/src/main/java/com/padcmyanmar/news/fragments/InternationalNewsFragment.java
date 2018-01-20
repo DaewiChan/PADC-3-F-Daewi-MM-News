@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import com.padcmyanmar.news.MMNewsApp;
 import com.padcmyanmar.news.R;
 import com.padcmyanmar.news.adapters.InternationAdapter;
-import com.padcmyanmar.news.adapters.SportAdapter;
 import com.padcmyanmar.news.data.models.NewsModel;
 import com.padcmyanmar.news.delegates.InternationActionDelegate;
 import com.padcmyanmar.news.events.LoadedNewsEvent;
@@ -34,8 +33,8 @@ public class InternationalNewsFragment extends Fragment implements InternationAc
     @BindView(R.id.rv_international_news)
     RecyclerView rvInternation;
 
-
     private InternationAdapter mInternationAdapter;
+
 
     @Nullable
     @Override

@@ -13,6 +13,7 @@ public class LoadedNewsEvent {
     private List<NewsVO> newsList;
 
     public LoadedNewsEvent(List<NewsVO> newsList) {
+
         this.newsList = newsList;
     }
 

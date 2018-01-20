@@ -30,14 +30,11 @@ public class NewsVO {
     }
 
     public String getBrief() {
-        return brief;
-    }
+        return brief;}
 
     public String getDetails() {
         return details;
     }
-
-
 
     public String getPostedDate() {
         return postedDate;

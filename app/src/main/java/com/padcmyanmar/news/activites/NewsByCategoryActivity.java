@@ -1,11 +1,14 @@
 package com.padcmyanmar.news.activites;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.padcmyanmar.news.R;
 import com.padcmyanmar.news.adapters.NewsByCategoryAdapter;
@@ -33,6 +36,11 @@ public class NewsByCategoryActivity extends AppCompatActivity {
 
     private NewsByCategoryAdapter mNewsByCategoryAdapter;
 
+    public static Intent newIntent(Context context){
+        Intent intent=new Intent(context,NewsByCategoryActivity.class);
+        return intent;
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,5 +65,14 @@ public class NewsByCategoryActivity extends AppCompatActivity {
         tbNewsByCategory.setupWithViewPager(vpNewsByCategory);
         vpNewsByCategory.setOffscreenPageLimit(mNewsByCategoryAdapter.getCount());
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==android.R.id.home);
+        {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

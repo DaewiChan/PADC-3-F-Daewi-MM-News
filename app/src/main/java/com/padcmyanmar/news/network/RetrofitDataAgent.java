@@ -59,7 +59,7 @@ public class RetrofitDataAgent implements NewsDataAgent {
          @Override
          public void onResponse(Call<GetNewsResponse> call, Response<GetNewsResponse> response) {
              GetNewsResponse getNewsResponse=response.body();
-             if(getNewsResponse.getMmNews()==null){
+             if(getNewsResponse.getMmNews()!=null){
                  LoadedNewsEvent event=new LoadedNewsEvent(getNewsResponse.getMmNews());
                  EventBus.getDefault().post(event);
              }
@@ -70,5 +70,10 @@ public class RetrofitDataAgent implements NewsDataAgent {
 
          }
      });
+    }
+
+    @Override
+    public void loginUser(String email, String password) {
+
     }
 }

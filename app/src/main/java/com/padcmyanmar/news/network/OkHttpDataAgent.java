@@ -25,6 +25,10 @@ import okhttp3.Response;
  */
 
 public class OkHttpDataAgent implements NewsDataAgent {
+    @Override
+    public void loginUser(String email, String password) {
+
+    }
 
     private static OkHttpDataAgent sObjectInstance;
 

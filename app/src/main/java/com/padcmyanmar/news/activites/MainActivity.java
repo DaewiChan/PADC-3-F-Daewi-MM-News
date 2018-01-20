@@ -2,8 +2,12 @@ package com.padcmyanmar.news.activites;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,8 +22,11 @@ import com.padcmyanmar.news.MMNewsApp;
 import com.padcmyanmar.news.R;
 import com.padcmyanmar.news.adapters.NewsAdapter;
 import com.padcmyanmar.news.data.models.NewsModel;
+import com.padcmyanmar.news.data.vo.NewsVO;
+import com.padcmyanmar.news.delegates.BeforeLoginDelegate;
 import com.padcmyanmar.news.delegates.NewsActionDelegate;
 import com.padcmyanmar.news.events.LoadedNewsEvent;
+import com.padcmyanmar.news.viewpods.BeforeUserLoginViewPod;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -31,7 +38,7 @@ import butterknife.OnClick;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NewsActionDelegate{
+        implements NewsActionDelegate,BeforeLoginDelegate{
     @BindView(R.id.rv_news)
     RecyclerView rvNews;
 
@@ -41,7 +48,14 @@ public class MainActivity extends AppCompatActivity
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
+    @BindView(R.id.navigation_view)
+    NavigationView navigationView;
+
+    @BindView(R.id.drawer_layout)
+    DrawerLayout drawerLayout;
+
     private NewsAdapter mNewsAdapter;
+    private BeforeUserLoginViewPod vpBeforeLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +65,13 @@ public class MainActivity extends AppCompatActivity
         ButterKnife.bind(this,this);
 
 
-       // setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
+
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setTitle(R.string.title_all_news);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_24dp);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         mNewsAdapter=new NewsAdapter(this);
 
@@ -67,6 +87,23 @@ public class MainActivity extends AppCompatActivity
 
         NewsModel.getsObjInstance().loadNews();
 
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                if(item.getItemId() == R.id.menu_news_by_categories){
+                    drawerLayout.closeDrawer(GravityCompat.START);
+
+                    Intent intent=NewsByCategoryActivity.newIntent(getApplicationContext());
+                    startActivity(intent);
+                }
+
+                return false;
+            }
+        });
+
+       vpBeforeLogin= (BeforeUserLoginViewPod) navigationView.getHeaderView(0);
+       vpBeforeLogin.setDelegate(this);
     }
 
     @Override
@@ -100,7 +137,10 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }else if(id== android.R.id.home){
+            drawerLayout.openDrawer(GravityCompat.START);
         }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -114,11 +154,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onTapNewsItem() {
+    public void onTapNewsItem(NewsVO tappedNews) {
         Intent intent=new Intent(getApplicationContext(),NewsDetailsActivity.class);
+        intent.putExtra("news_id",tappedNews.getNewsId());
         startActivity(intent);
 
     }
+
+
 
     @Override
     public void onTapCommentButton() {
@@ -143,4 +186,16 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    @Override
+    public void onTapToLogin() {
+        Intent intent=AccountControlActivity.newIntentLogin(getApplicationContext());
+        startActivity(intent);
+    }
+
+    @Override
+    public void onTapToRegister() {
+        Intent intent=AccountControlActivity.newIntentRegister(getApplicationContext());
+        startActivity(intent);
+
+    }
 }

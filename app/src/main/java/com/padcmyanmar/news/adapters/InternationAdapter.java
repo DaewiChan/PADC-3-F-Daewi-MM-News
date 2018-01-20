@@ -41,7 +41,7 @@ public class InternationAdapter extends RecyclerView.Adapter<ItemInternationView
 
         View newsItemView=inflater.inflate(R.layout.item_international_news, parent, false);
 
-        ItemInternationViewHolder itemInternationViewHolder=new ItemInternationViewHolder(newsItemView,mInternationalActionDelegate);
+        ItemInternationViewHolder itemInternationViewHolder=new ItemInternationViewHolder(context,newsItemView,mInternationalActionDelegate);
 
         return itemInternationViewHolder;
     }
@@ -51,7 +51,10 @@ public class InternationAdapter extends RecyclerView.Adapter<ItemInternationView
     @Override
     public void onBindViewHolder(ItemInternationViewHolder holder, int position) {
 
-      //holder.setNews(mNewsList.get(position));
+
+       // holder.internationTitleScrollAdapter.setNews(mNewsList);
+
+     holder.setNews(mNewsList);
 
     }
 

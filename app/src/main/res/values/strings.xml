@@ -16,5 +16,13 @@
     <string name="title_news_by_category">News by Category</string>
     <string name="international_bre">Brexit: penalising UK banks will pose financial risk to EU</string>
     <string name="sport_news">Real Madrid do not want to play beautiful football like Barcelona - Xavi</string>
+    <string name="title_all_news">All News</string>
+    <string name="menu_item_all_news">All News</string>
+    <string name="menu_item_news_by_category">News by Categories</string>
+    <string name="lbl_to_register">Register</string>
+    <string name="lbl_to_login">Login</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="register"><![CDATA[<b><i><u>Register</u></i></b>]]></string>
+    <string name="back_to_login"><b><i>Back to Login</i></b></string>
 
 </resources>

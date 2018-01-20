@@ -70,6 +70,207 @@
             android:text="Onefootball"
             android:textColor="#000"
             android:textSize="16sp" />
+        <View
+            android:id="@+id/v_sport_hero"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/iv_football"
+            android:background="#BDBDBD"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/iv_sport_hero"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@drawable/hero"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/v_sport_hero"
+            android:layout_margin="8dp"
+            />
+        <TextView
+            android:id="@+id/tv_second_hero_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nottingham Forest hero Eric Lichaj finally got that dog"
+            android:layout_below="@id/v_sport_hero"
+            android:layout_toRightOf="@id/iv_sport_hero"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <ImageView
+            android:id="@+id/iv_sport_hero_football"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/football"
+            android:layout_below="@id/tv_second_hero_title"
+            android:layout_toRightOf="@id/iv_sport_hero"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_second_football"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Onefootball"
+            android:layout_below="@id/tv_second_hero_title"
+            android:layout_toEndOf="@id/iv_sport_hero_football"
+            android:layout_toRightOf="@id/iv_sport_hero_football"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+
+
+        <View
+            android:id="@+id/v_sport_hero1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_second_football"
+            android:background="#BDBDBD"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/iv_sport_hero1"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@drawable/hero"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/v_sport_hero1"
+            android:layout_margin="8dp"
+            />
+        <TextView
+            android:id="@+id/tv_second_hero_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nottingham Forest hero Eric Lichaj finally got that dog"
+            android:layout_below="@id/v_sport_hero1"
+            android:layout_toRightOf="@id/iv_sport_hero1"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <ImageView
+            android:id="@+id/iv_sport_hero_football1"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/football"
+            android:layout_below="@id/tv_second_hero_title1"
+            android:layout_toRightOf="@id/iv_sport_hero1"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_second_football1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Onefootball"
+            android:layout_below="@id/tv_second_hero_title1"
+            android:layout_toEndOf="@id/iv_sport_hero_football1"
+            android:layout_toRightOf="@id/iv_sport_hero_football1"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+
+
+        <View
+            android:id="@+id/v_sport_hero2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_second_football1"
+            android:background="#BDBDBD"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/iv_sport_hero2"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@drawable/hero"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/v_sport_hero2"
+            android:layout_margin="8dp"
+            />
+        <TextView
+            android:id="@+id/tv_second_hero_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nottingham Forest hero Eric Lichaj finally got that dog"
+            android:layout_below="@id/v_sport_hero2"
+            android:layout_toRightOf="@id/iv_sport_hero2"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <ImageView
+            android:id="@+id/iv_sport_hero_football2"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/football"
+            android:layout_below="@id/tv_second_hero_title2"
+            android:layout_toRightOf="@id/iv_sport_hero2"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_second_football2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Onefootball"
+            android:layout_below="@id/tv_second_hero_title2"
+            android:layout_toEndOf="@id/iv_sport_hero_football2"
+            android:layout_toRightOf="@id/iv_sport_hero_football2"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+
+
+        <View
+            android:id="@+id/v_sport_hero3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_second_football2"
+            android:background="#BDBDBD"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/iv_sport_hero3"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@drawable/hero"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/v_sport_hero3"
+            android:layout_margin="8dp"
+            />
+        <TextView
+            android:id="@+id/tv_second_hero_title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nottingham Forest hero Eric Lichaj finally got that dog"
+            android:layout_below="@id/v_sport_hero3"
+            android:layout_toRightOf="@id/iv_sport_hero3"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <ImageView
+            android:id="@+id/iv_sport_hero_football3"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/football"
+            android:layout_below="@id/tv_second_hero_title3"
+            android:layout_toRightOf="@id/iv_sport_hero3"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_second_football3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Onefootball"
+            android:layout_below="@id/tv_second_hero_title3"
+            android:layout_toEndOf="@id/iv_sport_hero_football3"
+            android:layout_toRightOf="@id/iv_sport_hero_football3"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

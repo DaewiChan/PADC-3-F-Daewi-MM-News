@@ -39,13 +39,13 @@ public class ItemSportViewHolder extends RecyclerView.ViewHolder {
     }
 
     @OnClick(R.id.cv_sport_item_root)
-    public void onNewsItemTap(View view) {
+    public void onSportsItemTap(View view) {
         //Toast.makeText(view.getContext(),"News Item Clicked",Toast.LENGTH_LONG).show();
         mSportActionDelegate.onTapSportItem();
 
     }
 
-    public void setNews() {
+    public void setSportNews() {
 
     }
 
